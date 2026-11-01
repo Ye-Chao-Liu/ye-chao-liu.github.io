@@ -1,0 +1,30 @@
+{
+  "id": "tensor",
+  "title": "Convex semidefinite tensor optimization and quantum entanglement",
+  "authors": [
+    {
+      "name": "L. Xu"
+    },
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "S. Pokutta"
+    }
+  ],
+  "year": 2025,
+  "status": "preprint",
+  "venue": "arXiv:2511.05258",
+  "publicationDate": null,
+  "preprintDate": "2025",
+  "acceptanceDate": null,
+  "doi": "10.48550/arXiv.2511.05258",
+  "arxiv": "2511.05258",
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [],
+  "projectIds": [],
+  "highlightIds": ["computation"]
+}

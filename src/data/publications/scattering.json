@@ -1,0 +1,32 @@
+{
+  "id": "scattering",
+  "title": "Coherent effect in superscattering",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "X. Zhang"
+    }
+  ],
+  "year": 2016,
+  "status": "published",
+  "venue": "Journal of the Optical Society of America A 33, 2071–2075 (2016)",
+  "publicationDate": "2016-09-27",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1364/JOSAA.33.002071",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First author"
+    }
+  ],
+  "projectIds": [],
+  "highlightIds": []
+}

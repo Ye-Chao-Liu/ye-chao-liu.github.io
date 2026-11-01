@@ -1,0 +1,21 @@
+{
+  "id": "quantum-benchmarking",
+  "title": "Research on the practical realization of efficiently benchmarking large-scale quantum systems",
+  "description": null,
+  "startDate": "2022-01-01",
+  "endDate": "2025-12-31",
+  "status": "completed-funding-period",
+  "participants": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "Project Member"
+    }
+  ],
+  "funding": {
+    "funder": "National Natural Science Foundation of China",
+    "reference": "No. 12175014"
+  },
+  "image": null,
+  "url": null,
+  "highlightIds": []
+}

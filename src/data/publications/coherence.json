@@ -1,0 +1,35 @@
+{
+  "id": "coherence",
+  "title": "Coherence depletion in quantum algorithms",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Shang"
+    },
+    {
+      "name": "X. Zhang"
+    }
+  ],
+  "year": 2019,
+  "status": "published",
+  "venue": "Entropy 21, 260 (2019)",
+  "publicationDate": "2019-03-07",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.3390/e21030260",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First author"
+    }
+  ],
+  "projectIds": [],
+  "highlightIds": []
+}

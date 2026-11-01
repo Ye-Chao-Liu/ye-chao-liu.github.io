@@ -1,0 +1,18 @@
+---
+import '../styles/global.css';
+import { href, ui } from '../i18n/ui';
+import { primaryPerson as person } from '../data/academic';
+import { site } from '../data/site';
+interface Props { title: string; description?: string; noindex?: boolean }
+const { title, description = site.description, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const links = site.navigation.map(item => [item.path,ui.en[item.label]]);
+const active = Astro.url.pathname.replace(import.meta.env.BASE_URL, '').replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#163d67"/><link rel="icon" type="image/svg+xml" href={href('favicon.svg')}/><title>{title} · {site.title}</title>{noindex ? <meta name="robots" content="noindex, follow"/> : <link rel="canonical" href={canonical}/>}<link rel="sitemap" href={href("sitemap.xml")}/></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="wordmark" href={href()}>{person.name}<span lang="zh">{person.chineseName}</span></a><nav aria-label="Main navigation">{links.map(([path, label]) => <a href={href(path)} aria-current={active === path.replace(/\/$/, '') ? 'page' : undefined}>{label}</a>)}</nav></header>
+<main id="main"><slot/></main>
+<footer class="site-footer wrap"><div><a class="footer-name" href={href()}>{person.name} <span lang="zh">{person.chineseName}</span></a><p>{person.affiliation.school}<br/>{person.affiliation.institution}</p></div><div class="footer-contact">{person.email&&<a href={`mailto:${person.email}`}>{person.email}</a>}</div></footer>
+</body></html>

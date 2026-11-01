@@ -1,0 +1,35 @@
+{
+  "id": "designs",
+  "title": "Operational detection of entanglement via quantum designs",
+  "authors": [
+    {
+      "name": "X. Yan"
+    },
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Shang"
+    }
+  ],
+  "year": 2022,
+  "status": "published",
+  "venue": "Annalen der Physik (Berlin) 534, 2100594 (2022)",
+  "publicationDate": "2022-02-22",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1002/andp.202100594",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "Corresponding author"
+    }
+  ],
+  "projectIds": ["quantum-benchmarking"],
+  "highlightIds": []
+}

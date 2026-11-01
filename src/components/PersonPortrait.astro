@@ -1,0 +1,8 @@
+---
+import type { Person } from '../data/schema';
+import { href } from '../i18n/ui';
+interface Props { person:Person }
+const {person}=Astro.props;
+const initials=person.name.split(/\s+/).map(p=>p[0]).join('');
+---
+{person.photo ? <img class="person-portrait" src={href(person.photo.src)} alt={person.photo.alt} width="530" height="650"/> : <div class="portrait-placeholder"><div class="portrait-frame" aria-hidden="true"><span>{initials}</span><i></i></div><p>Portrait to be added<span>Personal photograph pending</span></p></div>}

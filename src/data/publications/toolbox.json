@@ -1,0 +1,43 @@
+{
+  "id": "toolbox",
+  "title": "Unified toolbox for multipartite entanglement certification",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Halbey"
+    },
+    {
+      "name": "S. Pokutta"
+    },
+    {
+      "name": "S. Designolle"
+    }
+  ],
+  "year": 2026,
+  "status": "accepted",
+  "venue": "Physical Review A, accepted 14 October 2026 · arXiv:2507.17435 (2025)",
+  "publicationDate": null,
+  "preprintDate": "2025",
+  "acceptanceDate": "2026-10-14",
+  "doi": "10.1103/tfsh-lwdj",
+  "arxiv": "2507.17435",
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First and corresponding author"
+    }
+  ],
+  "projectIds": [
+    "frank-wolfe-entanglement"
+  ],
+  "highlightIds": [
+    "computation"
+  ],
+  "preprintDoi": "10.48550/arXiv.2507.17435"
+}

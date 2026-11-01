@@ -1,0 +1,14 @@
+{
+  "id": "referee-quantum",
+  "type": "academic-service",
+  "title": "Referee of Quantum",
+  "date": null,
+  "participants": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "Referee"
+    }
+  ],
+  "projectIds": [],
+  "links": []
+}

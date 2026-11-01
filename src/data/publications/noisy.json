@@ -1,0 +1,35 @@
+{
+  "id": "noisy",
+  "title": "Verification of entangled states under noisy measurements",
+  "authors": [
+    {
+      "name": "L. Zhang"
+    },
+    {
+      "name": "Y. Li"
+    },
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Shang"
+    }
+  ],
+  "year": 2025,
+  "status": "published",
+  "venue": "Advanced Quantum Technologies 8, 2400575 (2025)",
+  "publicationDate": "2025-02-17",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1002/qute.202400575",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [],
+  "projectIds": ["quantum-benchmarking"],
+  "highlightIds": [
+    "imperfect"
+  ]
+}

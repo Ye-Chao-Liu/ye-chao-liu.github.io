@@ -1,0 +1,43 @@
+{
+  "id": "dicke",
+  "title": "Efficient verification of Dicke states",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "X.-D. Yu"
+    },
+    {
+      "name": "J. Shang"
+    },
+    {
+      "name": "H. Zhu"
+    },
+    {
+      "name": "X. Zhang"
+    }
+  ],
+  "year": 2019,
+  "status": "published",
+  "venue": "Physical Review Applied 12, 044020 (2019)",
+  "publicationDate": "2019-10-09",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1103/PhysRevApplied.12.044020",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "Co-first author"
+    }
+  ],
+  "projectIds": [],
+  "highlightIds": [
+    "verification"
+  ]
+}

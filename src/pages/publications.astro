@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Publication from '../components/Publication.astro';
+import { primaryPerson,personPublications,newestFirst,publicationDate } from '../data/academic';
+import { site } from '../data/site';
+const publications=newestFirst(personPublications(primaryPerson.id),publicationDate);
+const pageSize=site.publications.pageSize;
+const pageCount=Math.ceil(publications.length/pageSize);
+---
+<Layout title="Publications">
+  <section class="page-heading wrap"><h1>Publications</h1></section>
+  <section class="wrap publication-section" data-publication-browser data-page-size={pageSize}>
+    <div class="filter-bar">
+      <label for="publication-search">Find a publication<input id="publication-search" type="search" placeholder="Search title, author, or year…"/></label>
+      <label for="publication-type">Publication type<select id="publication-type"><option value="all">All</option><option value="published">Published</option><option value="preprints">Preprints</option></select></label>
+    </div>
+    <p id="result-count" class="muted" role="status" aria-live="polite" tabindex="-1">Showing 1–{Math.min(pageSize,publications.length)} of {publications.length} publications</p>
+    <div id="publication-list">{publications.map((p,index)=><Publication paper={p} hidden={index>=pageSize}/>)}</div>
+    <p id="no-results" hidden>No publications match your search. Try another title, author, or year.</p>
+    <nav id="publication-pagination" class="pagination" aria-label="Publication pages" hidden={pageCount<=1}>
+      <button id="publication-previous" type="button" aria-controls="publication-list" disabled>← Previous</button>
+      <div id="publication-pages" class="pagination-pages">{Array.from({length:pageCount},(_,i)=><button type="button" data-page={i+1} aria-label={`Page ${i+1}`} aria-current={i===0?'page':undefined} aria-controls="publication-list">{i+1}</button>)}</div>
+      <button id="publication-next" type="button" aria-controls="publication-list">Next →</button>
+    </nav>
+    <noscript><style>[data-publication][hidden]{display:grid!important}#publication-pagination,#result-count,.filter-bar{display:none!important}</style><p>All publications are shown. Enable JavaScript to use filters and pagination.</p></noscript>
+  </section>
+</Layout>
+<script>
+const root=document.querySelector<HTMLElement>('[data-publication-browser]')!;
+const search=root.querySelector<HTMLInputElement>('#publication-search')!;
+const type=root.querySelector<HTMLSelectElement>('#publication-type')!;
+const records=[...root.querySelectorAll<HTMLElement>('[data-publication]')];
+const size=Number(root.dataset.pageSize);
+const status=root.querySelector<HTMLElement>('#result-count')!;
+const pagination=root.querySelector<HTMLElement>('#publication-pagination')!;
+const pages=root.querySelector<HTMLElement>('#publication-pages')!;
+const previous=root.querySelector<HTMLButtonElement>('#publication-previous')!;
+const next=root.querySelector<HTMLButtonElement>('#publication-next')!;
+let currentPage=1;
+function render(){
+  const term=search.value.toLocaleLowerCase().trim();
+  const filtered=records.filter(record=>(type.value==='all'||record.dataset.type===type.value)&&record.textContent!.toLocaleLowerCase().includes(term));
+  const count=Math.ceil(filtered.length/size);
+  currentPage=Math.max(1,Math.min(currentPage,count||1));
+  const start=(currentPage-1)*size;
+  const visible=new Set(filtered.slice(start,start+size));
+  records.forEach(record=>record.hidden=!visible.has(record));
+  status.textContent=filtered.length?`Showing ${start+1}–${Math.min(start+size,filtered.length)} of ${filtered.length} publications`:'No matching publications';
+  root.querySelector<HTMLElement>('#no-results')!.hidden=filtered.length>0;
+  pagination.hidden=count<=1;
+  previous.disabled=currentPage===1;
+  next.disabled=currentPage>=count;
+  pages.replaceChildren(...Array.from({length:count},(_,i)=>{
+    const button=document.createElement('button');button.type='button';button.textContent=String(i+1);
+    button.dataset.page=String(i+1);button.setAttribute('aria-label',`Page ${i+1}`);button.setAttribute('aria-controls','publication-list');
+    if(i+1===currentPage)button.setAttribute('aria-current','page');
+    return button;
+  }));
+}
+function changePage(value:number){currentPage=value;render();status.focus();}
+previous.addEventListener('click',()=>changePage(currentPage-1));
+next.addEventListener('click',()=>changePage(currentPage+1));
+pages.addEventListener('click',event=>{const button=(event.target as Element).closest<HTMLButtonElement>('button[data-page]');if(button)changePage(Number(button.dataset.page));});
+const reset=()=>{currentPage=1;render();};
+search.addEventListener('input',reset);type.addEventListener('change',reset);
+function revealAnchor(){
+  let id='';try{id=decodeURIComponent(location.hash.slice(1));}catch{return false;}
+  const index=records.findIndex(record=>record.id===id);if(index<0)return false;
+  search.value='';type.value='all';currentPage=Math.floor(index/size)+1;render();
+  records[index].scrollIntoView({block:'start'});return true;
+}
+window.addEventListener('hashchange',revealAnchor);
+if(!revealAnchor())render();
+</script>

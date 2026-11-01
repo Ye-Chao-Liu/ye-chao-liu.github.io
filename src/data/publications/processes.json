@@ -1,0 +1,38 @@
+{
+  "id": "processes",
+  "title": "Efficient verification of quantum processes",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Shang"
+    },
+    {
+      "name": "X.-D. Yu"
+    },
+    {
+      "name": "X. Zhang"
+    }
+  ],
+  "year": 2020,
+  "status": "published",
+  "venue": "Physical Review A 101, 042315 (2020)",
+  "publicationDate": "2020-04-15",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1103/PhysRevA.101.042315",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First author"
+    }
+  ],
+  "projectIds": [],
+  "highlightIds": []
+}

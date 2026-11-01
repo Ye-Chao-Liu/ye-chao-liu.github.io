@@ -1,0 +1,35 @@
+{
+  "id": "buffers",
+  "title": "Robust entanglement buffers based on SWAP interactions",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "O. Gühne"
+    },
+    {
+      "name": "S. Nimmrichter"
+    }
+  ],
+  "year": 2025,
+  "status": "published",
+  "venue": "Quantum Science and Technology 10, 04LT01 (2025)",
+  "publicationDate": "2025-08-07",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1088/2058-9565/adf2d7",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First and corresponding author"
+    }
+  ],
+  "projectIds": [],
+  "highlightIds": []
+}

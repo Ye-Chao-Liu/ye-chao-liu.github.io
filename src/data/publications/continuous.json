@@ -1,0 +1,35 @@
+{
+  "id": "continuous",
+  "title": "Efficient verification of entangled continuous-variable quantum states with local measurements",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Shang"
+    },
+    {
+      "name": "X. Zhang"
+    }
+  ],
+  "year": 2021,
+  "status": "published",
+  "venue": "Physical Review Research 3, L042004 (2021)",
+  "publicationDate": "2021-10-11",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1103/PhysRevResearch.3.L042004",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First author"
+    }
+  ],
+  "projectIds": [],
+  "highlightIds": []
+}

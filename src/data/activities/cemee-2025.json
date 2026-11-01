@@ -1,0 +1,15 @@
+{
+  "id": "cemee-2025",
+  "type": "invited-talk",
+  "title": "CEMEE 2025",
+  "date": "2025-12",
+  "location": "Chongqing / Online",
+  "participants": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "Speaker"
+    }
+  ],
+  "projectIds": [],
+  "links": []
+}

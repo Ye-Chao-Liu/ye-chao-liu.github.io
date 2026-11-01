@@ -1,0 +1,34 @@
+{
+  "id": "collective",
+  "title": "Beating the optimal verification of entangled states via collective strategies",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Shang"
+    }
+  ],
+  "year": 2025,
+  "status": "published",
+  "venue": "Physical Review A 112, L060401 (2025)",
+  "publicationDate": "2025-12-04",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1103/6yrh-9tzp",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First and corresponding author"
+    }
+  ],
+  "projectIds": ["quantum-benchmarking"],
+  "highlightIds": [
+    "verification"
+  ]
+}

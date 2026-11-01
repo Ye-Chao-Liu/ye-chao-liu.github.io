@@ -1,0 +1,38 @@
+{
+  "id": "homogeneous",
+  "title": "Efficient verification of arbitrary entangled states with homogeneous local measurements",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "Y. Li"
+    },
+    {
+      "name": "J. Shang"
+    },
+    {
+      "name": "X. Zhang"
+    }
+  ],
+  "year": 2023,
+  "status": "published",
+  "venue": "Advanced Quantum Technologies 6, 2300083 (2023)",
+  "publicationDate": "2023-06-13",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1002/qute.202300083",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First author"
+    }
+  ],
+  "projectIds": ["quantum-benchmarking"],
+  "highlightIds": []
+}

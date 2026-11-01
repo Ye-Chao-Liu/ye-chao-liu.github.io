@@ -1,0 +1,40 @@
+{
+  "id": "nondemolition",
+  "title": "Universally optimal verification of entangled states with nondemolition measurements",
+  "authors": [
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "J. Shang"
+    },
+    {
+      "name": "R. Han"
+    },
+    {
+      "name": "X. Zhang"
+    }
+  ],
+  "year": 2021,
+  "status": "published",
+  "venue": "Physical Review Letters 126, 090504 (2021)",
+  "publicationDate": "2021-03-04",
+  "preprintDate": null,
+  "acceptanceDate": null,
+  "doi": "10.1103/PhysRevLett.126.090504",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "First author"
+    }
+  ],
+  "projectIds": [],
+  "highlightIds": [
+    "verification"
+  ]
+}

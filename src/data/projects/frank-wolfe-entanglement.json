@@ -1,0 +1,21 @@
+{
+  "id": "frank-wolfe-entanglement",
+  "title": "Entanglement Detection via Frank-Wolfe Algorithms",
+  "description": null,
+  "startDate": "2024-01-01",
+  "endDate": "2025-12-31",
+  "status": "completed-funding-period",
+  "participants": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "Project Member"
+    }
+  ],
+  "funding": {
+    "funder": "Deutsche Forschungsgemeinschaft",
+    "reference": "No. 390685689 · MATH+, AA2-19"
+  },
+  "image": null,
+  "url": "https://mathplus.de/research-2/application-areas/aa2-nano-quantum-technologies/aa2-19/",
+  "highlightIds": []
+}

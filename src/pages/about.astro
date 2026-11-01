@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { primaryPerson as person,personActivities,activityLabel,formatDate } from '../data/academic';
+import { site } from '../data/site';
+const awards=person.awards.filter(a=>site.about.awardIds.includes(a.id));
+const activities=personActivities(person.id).slice(0,site.about.activityLimit);
+---
+<Layout title="About / CV"><section class="page-heading wrap"><p class="eyebrow">About / Curriculum vitae</p><h1>{person.name} <span class="chinese-heading" lang="zh">{person.chineseName}</span></h1><p class="lede">{person.position} · {person.affiliation.institution}</p><p class="reading-width">{person.bio}</p><button class="button print-button" onclick="window.print()">Print / save this CV <span aria-hidden="true">↗</span></button></section>
+<div class="cv-layout wrap"><aside><nav aria-label="CV sections"><a href="#appointments">Appointments</a><a href="#education">Education</a><a href="#awards">Honors &amp; awards</a><a href="#activities">Academic activities</a></nav></aside><div>
+<section class="cv-section" id="appointments"><h2>Academic appointments</h2>{person.employment.map(e=><div class="cv-row"><span>{e.dates}</span><div><h3>{e.position}</h3><p>{e.institution}</p></div></div>)}</section>
+<section class="cv-section" id="education"><h2>Education</h2>{person.education.map(e=><div class="cv-row"><span>{e.dates}</span><div><h3>{e.degree}</h3><p>{e.institution}</p></div></div>)}</section>
+<section class="cv-section" id="awards"><h2>Honors &amp; awards</h2>{awards.map(a=><div class="cv-row"><span>{a.year}</span><div><h3>{a.title}</h3><p>{a.institution}</p></div></div>)}</section>
+<section class="cv-section" id="activities"><h2>Academic activities</h2>{activities.map(a=><div class="cv-row" data-activity={a.id}><span>{formatDate(a.date)}</span><div><h3>{a.title}</h3><p>{activityLabel(a.type)}{a.location&&` · ${a.location}`}</p></div></div>)}</section>
+</div></div></Layout>

@@ -1,0 +1,57 @@
+{
+  "id": "nonstabilizer",
+  "title": "Prescriptive preparation and verification of nonstabilizer states",
+  "authors": [
+    {
+      "name": "J. Li"
+    },
+    {
+      "name": "Y.-C. Liu",
+      "personId": "ye-chao-liu"
+    },
+    {
+      "name": "X.-X. Chen"
+    },
+    {
+      "name": "Z. Meng"
+    },
+    {
+      "name": "X.-Y. Fan"
+    },
+    {
+      "name": "W.-H. Wang"
+    },
+    {
+      "name": "J. Ma"
+    },
+    {
+      "name": "A.-N. Zhang"
+    },
+    {
+      "name": "J. Shang"
+    }
+  ],
+  "year": 2026,
+  "status": "published",
+  "venue": "Physical Review Applied 26, 014074 (2026)",
+  "publicationDate": "2026-07-23",
+  "preprintDate": null,
+  "acceptanceDate": "2026-06-02",
+  "doi": "10.1103/4hxp-fswy",
+  "arxiv": null,
+  "url": null,
+  "pdf": null,
+  "abstract": null,
+  "authorRoles": [
+    {
+      "personId": "ye-chao-liu",
+      "role": "Corresponding author"
+    }
+  ],
+  "projectIds": [
+    "quantum-benchmarking"
+  ],
+  "highlightIds": [
+    "preparation"
+  ]
+}

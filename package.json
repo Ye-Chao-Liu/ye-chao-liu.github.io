@@ -1,0 +1,23 @@
+{
+  "name": "ye-chao-liu-academic",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "pnpm validate:content && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "validate:content": "node --experimental-strip-types scripts/validate-content.mjs",
+    "test:content": "node --experimental-strip-types --test scripts/content.test.mjs",
+    "audit:site": "node scripts/audit-site.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.7.0"
+  }
+}

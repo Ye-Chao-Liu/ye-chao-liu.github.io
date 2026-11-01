@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { primaryPerson,personProjects,newestFirst,formatDate } from '../data/academic';
+import { href } from '../i18n/ui';
+const projects=newestFirst(personProjects(primaryPerson.id),p=>p.startDate);
+---
+<Layout title="Projects"><section class="page-heading wrap"><h1>Projects</h1></section><section class="wrap section projects-list">{projects.map((p,i)=><article class="project" id={p.id}><span class="card-number">{String(i+1).padStart(2,'0')}</span><div>{p.image&&<img class="project-image" src={href(p.image.src)} alt={p.image.alt} loading="lazy"/>}<p class="eyebrow">{p.participants.filter(v=>v.personId===primaryPerson.id).map(v=>v.role).join(', ')} · {p.status==='completed-funding-period'?'Completed funding period':p.status}</p><h2>{p.title}</h2>{p.description&&<p>{p.description}</p>}{p.funding&&<p>{p.funding.funder}<br/>{p.funding.reference}</p>}<p class="muted">{formatDate(p.startDate)}–{p.endDate?formatDate(p.endDate):'Present'}</p>{p.url&&<a class="text-link" href={p.url}>Project information ↗</a>}</div></article>)}</section></Layout>

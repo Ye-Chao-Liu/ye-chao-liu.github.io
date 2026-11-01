@@ -1,0 +1,101 @@
+{
+  "id": "ye-chao-liu",
+  "name": "Ye-Chao Liu",
+  "chineseName": "刘烨超",
+  "position": "Associate Professor",
+  "affiliation": {
+    "school": "School of Physics and Optoelectronic Engineering",
+    "institution": "Hainan University"
+  },
+  "bio": "My research concerns quantum information acquisition, processing, and analysis, connecting quantum measurements, mathematical optimization, statistical inference, and quantum information processing.",
+  "introduction": "My research explores how quantum information can be efficiently acquired, analyzed, and used to understand quantum systems and improve quantum information tasks.",
+  "researchInterests": [
+    "Quantum information acquisition, processing, and analysis",
+    "Quantum measurements",
+    "Mathematical optimization",
+    "Statistical inference"
+  ],
+  "email": "ye-chao-liu@hainanu.edu.cn",
+  "photo": {
+              "src": "images/people/ye-chao-liu.jpg",
+              "alt": "Academic portrait of Ye-Chao Liu"
+            },
+  "profileLinks": [],
+  "membership": null,
+  "employment": [
+    {
+      "dates": "09/2026–Present",
+      "position": "Associate Professor",
+      "institution": "Hainan University"
+    },
+    {
+      "dates": "01/2024–08/2026",
+      "position": "Postdoctoral Researcher",
+      "institution": "Zuse Institute Berlin"
+    },
+    {
+      "dates": "02/2022–12/2023",
+      "position": "Postdoctoral Researcher",
+      "institution": "University of Siegen"
+    },
+    {
+      "dates": "07/2021–06/2022",
+      "position": "Research Assistant",
+      "institution": "Beijing Institute of Technology"
+    }
+  ],
+  "education": [
+    {
+      "dates": "09/2016–06/2021",
+      "degree": "Doctor of Science",
+      "institution": "Beijing Institute of Technology",
+      "supervisors": "Xiangdong Zhang and Jiangwei Shang",
+      "thesis": "Study on the Efficient Verification of Quantum States and Quantum Processes"
+    },
+    {
+      "dates": "09/2012–06/2016",
+      "degree": "Bachelor of Science",
+      "institution": "Beijing Institute of Technology",
+      "supervisors": "Xiangdong Zhang",
+      "thesis": "Coherent effect in superscattering"
+    }
+  ],
+  "awards": [
+    {
+      "id": "outstanding-doctoral-dissertation",
+      "year": 2022,
+      "title": "Outstanding Doctoral Dissertation",
+      "institution": "Beijing Municipal Education Commission"
+    },
+    {
+      "id": "beijing-outstanding-graduate",
+      "year": 2021,
+      "title": "Outstanding Graduate of High Education in Beijing",
+      "institution": "Beijing Municipal Education Commission"
+    },
+    {
+      "id": "university-outstanding-graduate",
+      "year": 2021,
+      "title": "Outstanding University Graduate",
+      "institution": "Beijing Institute of Technology"
+    },
+    {
+      "id": "thesis-dissertation-awards",
+      "year": 2021,
+      "title": "Outstanding Graduate Thesis and Dissertation Awards",
+      "institution": "Beijing Institute of Technology"
+    },
+    {
+      "id": "national-scholarship",
+      "year": 2020,
+      "title": "National Scholarship (No. BSY202006499)",
+      "institution": "Ministry of Education of P. R. China"
+    },
+    {
+      "id": "dissertation-seedling-fund",
+      "year": 2020,
+      "title": "Seedling Fund for Excellent Doctoral Dissertation",
+      "institution": "Beijing Institute of Technology"
+    }
+  ]
+}
