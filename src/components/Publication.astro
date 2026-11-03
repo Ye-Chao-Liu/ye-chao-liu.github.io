@@ -4,11 +4,18 @@ import { site } from '../data/site';
 import { primaryPerson,displayGroup,publicationUrl } from '../data/academic';
 interface Props { paper: Publication; compact?: boolean; hidden?: boolean }
 const { paper, compact = false, hidden = false } = Astro.props;
+const escapeRegExp=(value:string)=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const arxivId=paper.arxiv?.replace(/v\d+$/,'') ?? null;
+const publicationInfo=arxivId?paper.venue.replace(new RegExp(`\\s*(?:[·•|,;]\\s*)?arXiv:\\s*${escapeRegExp(arxivId)}(?:v\\d+)?(?:\\s*\\(\\d{4}\\))?`,'gi'),'').replace(/^[\s·•|,;:-]+|[\s·•|,;:-]+$/g,'').trim():paper.venue;
+const links:{href:string;label:string}[]=[];
+if(paper.arxiv)links.push({href:`https://arxiv.org/abs/${paper.arxiv}`,label:`arXiv:${paper.arxiv}`});
+if(paper.pdf)links.push({href:paper.pdf,label:'PDF'});
+if(paper.url)links.push({href:paper.url,label:'Publication website'});
 ---
 <article class:list={['publication', { compact }]} id={paper.id} hidden={hidden} data-publication data-type={displayGroup(paper)} data-status={paper.status} data-year={paper.year}>
   <div class="pub-year">{paper.year}<span>{paper.status === 'published' ? 'Published' : paper.status === 'accepted' ? 'Accepted' : paper.status === 'submitted' ? 'Submitted' : 'Preprint'}</span></div>
   <div><h3><a href={publicationUrl(paper)}>{paper.title}<span class="external" aria-label="external publication link"> ↗</span></a></h3>
   {!compact && <p class="authors">{paper.authors.map((author,i)=><>{i>0&&(i===paper.authors.length-1?' and ':', ')}{author.personId===primaryPerson.id?<strong>{author.name}</strong>:author.name}</>)}</p>}
-  <p class="venue">{paper.venue}</p>{site.publications.showAuthorRoles && !compact && paper.authorRoles.filter(r=>r.personId===primaryPerson.id).map(r=><span class="author-role">{r.role}</span>)}
-  {!compact && (paper.arxiv || paper.pdf || paper.url) && <p class="publication-links">{paper.arxiv&&<a href={`https://arxiv.org/abs/${paper.arxiv}`}>arXiv:{paper.arxiv}</a>}{paper.pdf&&<a href={paper.pdf}>PDF</a>}{paper.url&&<a href={paper.url}>Publication website</a>}</p>}</div>
+  {compact ? <p class="venue">{paper.venue}</p> : <p class="venue">{publicationInfo}{publicationInfo&&links.length>0&&<span aria-hidden="true"> · </span>}{links.map((link,index)=><>{index>0&&<span aria-hidden="true"> · </span>}<a href={link.href}>{link.label}</a></>)}</p>}
+  {site.publications.showAuthorRoles && !compact && paper.authorRoles.filter(r=>r.personId===primaryPerson.id).map(r=><span class="author-role">{r.role}</span>)}</div>
 </article>
